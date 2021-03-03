@@ -1,0 +1,119 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Rubik', sans-serif;
+}
+
+/* navbar styling */
+
+header{
+    background-color: #000000e0;
+}
+.page-header #nav-items a{
+    color: white;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    height: 4.0em;
+}
+.navbar-brand {
+    display: flex;
+    font-family: 'Rubik', sans-serif;
+    color: white;
+    width: 189px;
+    height: 64px;
+    font-size: 22px;
+    font-weight: 600;
+    margin-left: 100px;
+    margin-top: -10px;
+}
+li {
+    padding: 20px;
+}
+.main-nav{
+    display: flex;
+    list-style: none;
+    margin-right: 100px;
+
+    margin-top: -10px;
+}
+.fab{
+    margin-left: 5px;
+    margin-right: 5px;
+    color: #dc143c;
+    font-size: 20px;
+}
+.navbar a{
+    color: white;
+    text-decoration: none;
+}
+.navbar .main-nav li a:hover{
+    color: #dc143c;
+
+}
+.navbar .animate__animated{
+    animation: flash;
+    animation-duration: 2.4s;
+    animation-iteration-count: 3;
+}
+
+
+/* center nav */
+
+.center-nav{
+    display: flex;
+    margin-left: -80px;
+}
+.center-nav li{
+    list-style: none;
+    margin-top: -10px;
+}
+/* center nav hover */
+.center-nav li a:hover{
+    color: white;
+}
+.center-nav li:hover {
+    background-color: #353535;
+    color: white;
+}
+.center-nav li {
+    font-size: 13px;
+    padding: 22px;
+}
+
+
+
+
+/* section-content */
+
+.section-content h2{
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* carusel */
+
+#myCarousel {
+    background-color: white;
+    height: 20rem;
+    margin-top: 20px;
+}
+
+
+.carousel-item img{
+    position: relative;
+    margin-left: 650px;
+    margin-top: 10px;
+    width: 180px;
+}
+.carousel-item h5{
+    display: inline;
+    margin-left: 20px;
+}
+
+.fa{
+    color: black;
+}

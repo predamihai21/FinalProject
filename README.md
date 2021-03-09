@@ -8,3 +8,17 @@ Mihai Preda
 ### Project init
 `$ npm init`
 
+### Install JSON Server
+`$ npm install --save json-server`
+`$ npm install -g json-server`
+
+
+### Start JSON server:
+
+`$ npx json-server --watch db.json`
+
+
+
+
+<!-- npm install --save json-server
+npx json-server --watch db.json -->

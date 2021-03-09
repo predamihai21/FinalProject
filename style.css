@@ -91,7 +91,7 @@ li {
 
 .section-content h2{
     text-align: center;
-    margin-top: 20px;
+    margin-top: 60px;
 }
 
 /* carusel */
@@ -99,21 +99,180 @@ li {
 #myCarousel {
     background-color: white;
     height: 20rem;
-    margin-top: 20px;
+    margin-top: 60px;
 }
 
 
 .carousel-item img{
-    position: relative;
-    margin-left: 650px;
-    margin-top: 10px;
+    display: flex;
+    /* margin-left: 650px;
+    margin-top: 10px; */
+    margin: auto;
     width: 180px;
 }
-.carousel-item h5{
-    display: inline;
-    margin-left: 20px;
+
+
+/* .carousel-item h5{
+    position: relative;
+    margin-top: -100px;
+
+    
+} */
+
+.model{
+    position: absolute;
+    width: 150px;
+    height: 50px;
+    margin-top: -130px;
+    margin-left: 380px;
 }
 
 .fa{
     color: black;
+}
+/* h3 title text */
+
+.titleText{
+    text-align: center;
+    margin-top: 60px;
+}
+
+/* product card */
+.container{
+    margin-top: 60px;
+}
+.product-grid{
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+.product-grid:hover{
+    /* box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+    /* border: 1px solid#4e33e4; */
+    /* cssmatic.com/box-shadow */
+    -webkit-box-shadow: 0px 0px 8px 0.19px rgba(78,51,228,0.9);
+    -moz-box-shadow: 0px 0px 8px 0.19px rgba(78,51,228,0.9);
+    box-shadow: 0px 0px 8px 0.19px rgba(78,51,228,0.9);
+}
+.text-center{
+    margin-top: 30px;
+}
+.image{
+    position: relative;
+    width: 160px;
+    height: 202px;
+    background-size: 160px 202px;
+    background-repeat: no-repeat;
+    background-image: url(./images/iphone12.jpg);
+    margin-right: auto;
+    margin-left: auto;
+}
+.overlay{
+    position: absolute;
+    border-radius: 10%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 106%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgba(67, 68, 68, 0.7);
+}
+.image:hover .overlay{
+    opacity: 1;
+}
+.detail{
+    color: #fff;
+    font-size: 12px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%);
+}
+.buy{
+    background-color: transparent;
+    color: #434444;
+    border-radius: 0;
+    border: 1px solid #434444;
+    width: 100%;
+    margin-top: 20px;
+}
+.buy:hover{
+    background-color: #0071e3;
+    color: #fff;
+}
+
+
+/* footer */
+
+.fa-facebook-f {
+    color: #3b5998
+}
+.fa-twitter{
+    color: #55acee
+}
+.fa-google-plus-g{
+    color: #dd4b39;
+}
+.fa-lg{
+    color: #dd4b39
+}
+.fa-instagram{
+    color: #ac2bac
+}
+
+
+
+/* admin styling */
+#newProduct{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#newProductBtn{
+    width: 180px;
+    text-align: center;
+    justify-content: flex-end;
+    display: flex;
+    margin-top: 10px;
+    padding: 5px;
+    background-color: #0071e3;
+    color: #fff;
+}
+#newProductBtn:hover{
+    color: blue;
+    background-color: #fff;
+}
+.fa-plus{
+    color: blue;
+    padding: 3px;
+    margin-left: 5px;
+}
+.form{
+    width: 50px;
+    float: right;
+}
+.cantitate{
+    width: 60px;
+}
+
+
+
+
+/* admin form styling */
+.btn-block{
+    width: 100%;
+}
+
+
+/* admin image size */
+.img-thumbnail{
+    width: 32px;
+    height: 32px;
+}
+
+.form-group input{
+    margin-bottom: 20px;
 }

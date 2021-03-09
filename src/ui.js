@@ -19,7 +19,7 @@ class UI {
                         <td>${product.title}</td>
                         <td>${product.quantity}</td>
                         <td>${product.price}</td>
-                        <td><button class="btn btn-sm btn-danger" id="${product.id}">Delete</button></td>
+                        <td><button class="btn btn-sm btn-danger delete" id="${product.id}">Delete</button></td>
                     </tr>
                 </tbody>
             </table>
@@ -27,8 +27,6 @@ class UI {
             this.productsDiv.innerHTML = output;
         });
     }
-
-
 }
 
 export const ui = new UI();

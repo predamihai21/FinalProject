@@ -153,10 +153,24 @@ li {
     -moz-box-shadow: 0px 0px 8px 0.19px rgba(78,51,228,0.9);
     box-shadow: 0px 0px 8px 0.19px rgba(78,51,228,0.9);
 }
+
+.product-grid{
+    display: inline-block;
+    margin-right: 15px;
+    padding: 10px 5px 5px 5px;
+    width: 260px !important;
+    margin-bottom: 60px;
+}
+
+#first{
+    margin-left: 80px;
+}
+
+
 .text-center{
     margin-top: 30px;
 }
-.image{
+/* #image{
     position: relative;
     width: 160px;
     height: 202px;
@@ -165,8 +179,10 @@ li {
     background-image: url(./images/iphone12.jpg);
     margin-right: auto;
     margin-left: auto;
-}
-.overlay{
+} */
+
+
+/* .overlay{
     position: absolute;
     border-radius: 10%;
     top: 0;
@@ -178,11 +194,11 @@ li {
     opacity: 0;
     transition: .5s ease;
     background-color: rgba(67, 68, 68, 0.7);
-}
-.image:hover .overlay{
+} */
+/* .image:hover .overlay{
     opacity: 1;
-}
-.detail{
+} */
+/* .detail{
     color: #fff;
     font-size: 12px;
     position: absolute;
@@ -190,7 +206,7 @@ li {
     left: 50%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%);
-}
+} */
 .buy{
     background-color: transparent;
     color: #434444;
@@ -245,18 +261,10 @@ li {
     color: blue;
     background-color: #fff;
 }
-.fa-plus{
-    color: blue;
-    padding: 3px;
-    margin-left: 5px;
-}
-.form{
-    width: 50px;
-    float: right;
-}
-.cantitate{
+
+/* .cantitate{
     width: 60px;
-}
+} */
 
 
 
@@ -274,5 +282,82 @@ li {
 }
 
 .form-group input{
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+}
+
+/* admin table and text styling */
+
+.table td {
+    text-align: left;
+    max-width: 50px;
+} 
+#textDesc{
+    width: 16.6%;
+}
+#textQuant{
+    width: 16.6%;
+}
+#textPrice{
+    width: 16.6%;
+    text-align: left;
+}
+#textOption{
+    width: 16.6%;
+    text-align: left;
+}
+#textImage{
+    width: 16.6%;
+}
+#tableList{
+    margin-bottom: -20px;
+}
+
+
+/* mac html page styling */
+.text-centered {
+    text-align: center;
+    margin-top: 60px;
+}
+
+
+/* mac card styling */
+
+.card-img-top {
+    max-width: 100%;
+    max-height: 410px;
+    vertical-align: middle;
+    border-style: none;
+}
+
+.card:hover{
+    -webkit-box-shadow: 0px 0px 8px 0.19px rgba(78,51,228,0.9);
+    -moz-box-shadow: 0px 0px 8px 0.19px rgba(78,51,228,0.9);
+     box-shadow: 0px 0px 8px 0.19px rgba(78,51,228,0.9);
+}
+
+/* watch banner styling */
+.banner{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: black;
+    margin-bottom: 350px;
+    color: white;
+    margin-bottom: 0px;
+    height: 400px;
+}
+.banner-left {
+    background: url(./images/prod-logo.png) no-repeat center;
+    background-size: 200px 70px;
+    margin-top: 50px;
+    width: 400px;
+    height: 80px;
+}
+.banner-right {
+    background: url(./images/asset-1.png) no-repeat center;
+    background-size: 400px 450px;
+    width: 400px;
+    height: 450px;
+    margin-top: 20px;
+    margin-left: -100px;
 }

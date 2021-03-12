@@ -18,6 +18,50 @@ class customHTTPMethods {
 			return data;
 	}
 
+
+
+
+
+
+
+	async post(url, mac) {
+		const response = await fetch(url,
+			{
+				method: 'POST',
+				headers: {
+					'Content-type' : 'application/json',
+				},
+				body: JSON.stringify(mac)
+			});
+			const data = await response.json();
+			return data;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	async delete(url) {
 		const response = await fetch(url,
 			{

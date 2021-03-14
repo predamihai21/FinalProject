@@ -18,6 +18,10 @@ class UI {
         this.ipadsDiv = document.getElementById('ipaduri');
 
         this.ceasuriDiv = document.getElementById('ceasuri');
+
+
+        //details
+        this.detailsDiv = document.getElementById('detailsPage');
     }
     // admin show products
     // iphones
@@ -38,14 +42,15 @@ class UI {
                 </tbody>
             </table>
             `;
-            this.productsDiv.innerHTML = output;
+            // this.productsDiv.innerHTML = output;
         });
+        this.productsDiv.innerHTML = output;
     }
     // macs
     showProductsMacs(macs) {
-        let output = '';
+        let output2 = '';
         macs.forEach(mac => {
-            output +=`
+            output2 +=`
             <table class="table table-striped table-dark">
                 <tbody>
                     <tr>
@@ -59,14 +64,14 @@ class UI {
                 </tbody>
             </table>
             `;
-            this.macsDiv.innerHTML = output;
+            this.macsDiv.innerHTML = output2;
         });
     }
     // ceasuri
     showProductsWatches(ceasuri) {
-        let output = '';
+        let output3 = '';
         ceasuri.forEach(ceas => {
-            output +=`
+            output3 +=`
             <table class="table table-striped table-dark">
                 <tbody>
                     <tr>
@@ -80,14 +85,14 @@ class UI {
                 </tbody>
             </table>
             `;
-            this.ceasuriDiv.innerHTML = output;
+            this.ceasuriDiv.innerHTML = output3;
         });
     }
     // ipaduri
     showProductsIpads(ipads) {
-        let output = '';
+        let output4 = '';
         ipads.forEach(ipad => {
-            output +=`
+            output4 +=`
             <table class="table table-striped table-dark">
                 <tbody>
                     <tr>
@@ -101,7 +106,7 @@ class UI {
                 </tbody>
             </table>
             `;
-            this.ipadsDiv.innerHTML = output;
+            this.ipadsDiv.innerHTML = output4;
         });
     }
 
@@ -112,9 +117,9 @@ class UI {
 
     // all products for index html
     showAllProducts(products) {
-        let output = '';
+        let output5 = '';
         products.forEach(product => {
-            output +=`
+            output5 +=`
                             <div class="col-sm-6 col-md-4 col-lg-2  product-grid">
                                     <div class="image">
                                         <a href="#">
@@ -124,19 +129,19 @@ class UI {
                                     <h5 class="text-center">${product.title}</h5>
                                     <h5 class="text-center">Pret: ${product.price} Ron</h5>
                                     <a href="#" class="btn buy">Buy</a>
-                                    <a href="#" class="btn buy">Add to Cart</a>
+                                    <a href="details.html?id=${product.id}" class="btn buy id="${product.id}">Details</a>
                             </div>
 
             `;
-            this.firstPageDiv.innerHTML = output;
+            this.firstPageDiv.innerHTML = output5;
         });
     }
 
     // this
     showMacProducts(macs) {
-        let output = '';
+        let output6 = '';
         macs.forEach(mac => {
-            output +=`
+            output6 +=`
                         <div class="col-sm-6 col-md-4 col-lg-2  product-grid">
                             <div class="image">
                                 <a href="#">
@@ -156,14 +161,14 @@ class UI {
                             <a href="#" class="btn buy">Add to Cart</a>
                         </div>
                     `;
-            this.macsDiv.innerHTML = output;
+            this.macsDiv.innerHTML = output6;
         });
     }
 
     showIpadProducts(ipads) {
-        let output = '';
+        let output7 = '';
         ipads.forEach(ipad => {
-            output +=`
+            output7 +=`
                         <div class="col-sm-6 col-md-4 col-lg-2  product-grid">
                             <div class="image">
                                 <a href="#">
@@ -176,16 +181,16 @@ class UI {
                             <a href="#" class="btn buy">Add to Cart</a>
                         </div>
                     `;
-            this.ipadDiv.innerHTML = output;
+            this.ipadDiv.innerHTML = output7;
         });
     }
 
 
 
     showWatchProducts(ceasuri) {
-        let output = '';
+        let output8 = '';
         ceasuri.forEach(ceas => {
-            output +=`
+            output8 +=`
                         <div class="col-sm-6 col-md-4 col-lg-2  product-grid">
                             <div class="image">
                                 <a href="#">
@@ -198,8 +203,30 @@ class UI {
                             <a href="#" class="btn buy">Add to Cart</a>
                         </div>
                     `;
-            this.watchDiv.innerHTML = output;
+            this.watchDiv.innerHTML = output8;
         });
+    }
+
+
+
+
+
+    showDetails(product){
+        let output ='';
+        output = `
+        <div class="col-sm-6 col-md-4 col-lg-2  product-grid">
+            <div class="image">
+                <a href="#">
+                    <img src="${product.image}" id="image" class="w-100" />
+                </a>
+            </div>
+            <h5 class="text-center">${product.title}</h5>
+            <h5 class="text-center">Pret: ${product.price} Ron</h5>
+            <a href="#" class="btn buy">Buy</a>
+            <a href="#" class="btn buy">Add to Cart</a>
+        </div>
+        `;
+        this.detailsDiv.innerHTML = output;
     }
 }
 

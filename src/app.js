@@ -1,6 +1,8 @@
 import { http } from './http.js';
 import {ui} from './ui.js';
 // Get Products on DOM load
+
+// iphones for admin table page
 document.addEventListener('DOMContentLoaded', getProducts);
 
 function getProducts() {
@@ -8,11 +10,13 @@ function getProducts() {
 	http.get('http://localhost:3000/products').then((data) => ui.showProducts(data));
 }
 
-//iphones admin
-document.addEventListener('DOMContentLoaded', getAllProducts);
-function getAllProducts(){
-	http.get('http://localhost:3000/products').then((data) => ui.showAllProducts(data));
-}
+// iphones admin
+// document.addEventListener('DOMContentLoaded', getAllProducts);
+// function getAllProducts(){
+// 	http.get('http://localhost:3000/products').then((data) => ui.showAllProducts(data));
+// }
+
+
 //ipads admin
 document.addEventListener('DOMContentLoaded', getAllIpads);
 function getAllIpads(){

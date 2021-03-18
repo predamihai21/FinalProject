@@ -20,11 +20,15 @@ class UI {
         this.ceasuriDiv = document.getElementById('ceasuri');
 
 
+        this.iphoneDiv = document.getElementById('iPhones');
+
+
         //details
         this.detailsDiv = document.getElementById('detailsPage');
+
+
     }
-    // admin show products
-    // iphones
+    // admin show all products
     showProducts(products) {
         let output = '';
         products.forEach(product => {
@@ -37,85 +41,17 @@ class UI {
                         <td>${product.description}</td>
                         <td>${product.quantity}</td>
                         <td>${product.price}</td>
-                        <td><button class="btn btn-sm btn-danger delete" id="${product.id}">Delete</button></td>
+                        <td><button class="btn btn-sm btn-danger delete" id="${product.id}"><i class="far fa-trash-alt"></i></button></td>
                     </tr>
                 </tbody>
             </table>
             `;
-            // this.productsDiv.innerHTML = output;
         });
         this.productsDiv.innerHTML = output;
     }
-    // macs
-    showProductsMacs(macs) {
-        let output = '';
-        macs.forEach(mac => {
-            output +=`
-            <table class="table table-striped table-dark">
-                <tbody>
-                    <tr>
-                        <td><img src="${mac.image}" class="img-thumbnail"/></td>
-                        <td>${mac.title}</td>
-                        <td>${mac.description}</td>
-                        <td>${mac.quantity}</td>
-                        <td>${mac.price}</td>
-                        <td><button class="btn btn-sm btn-danger delete" id="${mac.id}">Delete</button></td>
-                    </tr>
-                </tbody>
-            </table>
-            `;
-            this.macsDiv.innerHTML = output;
-        });
-    }
-    // ceasuri
-    showProductsWatches(ceasuri) {
-        let output = '';
-        ceasuri.forEach(ceas => {
-            output +=`
-            <table class="table table-striped table-dark">
-                <tbody>
-                    <tr>
-                        <td><img src="${ceas.image}" class="img-thumbnail"/></td>
-                        <td>${ceas.title}</td>
-                        <td>${ceas.description}</td>
-                        <td>${ceas.quantity}</td>
-                        <td>${ceas.price}</td>
-                        <td><button class="btn btn-sm btn-danger delete" id="${ceas.id}">Delete</button></td>
-                    </tr>
-                </tbody>
-            </table>
-            `;
-            this.ceasuriDiv.innerHTML = output;
-        });
-    }
-    // ipaduri
-    showProductsIpads(ipads) {
-        let output = '';
-        ipads.forEach(ipad => {
-            output +=`
-            <table class="table table-striped table-dark">
-                <tbody>
-                    <tr>
-                        <td><img src="${ipad.image}" class="img-thumbnail"/></td>
-                        <td>${ipad.title}</td>
-                        <td>${ipad.description}</td>
-                        <td>${ipad.quantity}</td>
-                        <td>${ipad.price}</td>
-                        <td><button class="btn btn-sm btn-danger delete" id="${ipad.id}">Delete</button></td>
-                    </tr>
-                </tbody>
-            </table>
-            `;
-            this.ipadsDiv.innerHTML = output;
-        });
-    }
 
 
-
-
-
-
-    // all products for index html
+    // all products for index html => store.html
     showAllProducts(products) {
         let output = '';
         products.forEach(product => {
@@ -127,7 +63,7 @@ class UI {
                                         </a>
                                     </div>
                                     <h5 class="text-center">${product.title}</h5>
-                                    <h5 class="text-center">Pret: ${product.price} Ron</h5>
+                                    <h5 class="text-center">Price: ${product.price} Ron</h5>
                                     <a href="#" class="btn buy">Buy</a>
                                     <a href="details.html?id=${product.id}" class="btn buy id="${product.id}">Details</a>
                             </div>
@@ -137,140 +73,146 @@ class UI {
         });
     }
 
-    // this
-    showMacProducts(macs) {
+    // show macs on mac html
+    showMacProducts(products) {
         let output = '';
-        macs.forEach(mac => {
+        products.forEach(product => {
+            if(product.category == "mac"){
             output +=`
                         <div class="col-sm-6 col-md-4 col-lg-2  product-grid">
                             <div class="image">
                                 <a href="#">
-                                    <img src="${mac.image}" id="image" class="w-100" />
+                                    <img src="${product.image}" id="image" class="w-100" />
                                 </a>
                             </div>
-                            <h5 class="text-center">${mac.title}</h5>
-                            <p class="card-text">${mac.description}</p>
-                            <h5 class="text-center">Pret: ${mac.price} Ron</h5>
+                            <h5 class="text-center">${product.title}</h5>
+                            <p class="card-text">${product.description}</p>
+                            <h5 class="text-center">Pret: ${product.price} Ron</h5>
                             <ul class="list-group list-group-flush">
-                                <li class="list-group-item">${mac.power}</li>
-                                <li class="list-group-item">${mac.ram}</li>
-                                <li class="list-group-item">${mac.hard}</li>
-                                <li class="list-group-item">${mac.monitor}</li>
+                                <li class="list-group-item">${product.power}</li>
+                                <li class="list-group-item">${product.ram}</li>
+                                <li class="list-group-item">${product.hard}</li>
+                                <li class="list-group-item">${product.monitor}</li>
                             </ul>
                             <a href="#" class="btn buy">Buy</a>
-                            <a href="details.html?id=${mac.id}" class="btn buy id="${mac.id}">Details</a>
+                            <a href="details.html?id=${product.id}" class="btn buy id="${product.id}">Details</a>
                         </div>
                     `;
             this.macsDiv.innerHTML = output;
+            }
         });
     }
 
-    showIpadProducts(ipads) {
+    // show ipad on ipad html
+    showIpadProducts(products) {
         let output = '';
-        ipads.forEach(ipad => {
+        products.forEach(product => {
+            if(product.category == "iPad"){
             output +=`
                         <div class="col-sm-6 col-md-4 col-lg-2  product-grid">
                             <div class="image">
                                 <a href="#">
-                                    <img src="${ipad.image}" id="image" class="w-100" />
+                                    <img src="${product.image}" id="image" class="w-100" />
                                 </a>
                             </div>
-                            <h5 class="text-center">${ipad.title}</h5>
-                            <h5 class="text-center">Pret: ${ipad.price} Ron</h5>
+                            <h5 class="text-center">${product.title}</h5>
+                            <h5 class="text-center">Price: ${product.price} Ron</h5>
                             <a href="#" class="btn buy">Buy</a>
-                            <a href="details.html?id=${ipad.id}" class="btn buy id="${ipad.id}">Details</a>
+                            <a href="details.html?id=${product.id}" class="btn buy id="${ipad.id}">Details</a>
                         </div>
                     `;
             this.ipadDiv.innerHTML = output;
+            }
         });
+    
     }
 
 
-
-    showWatchProducts(ceasuri) {
+    // show watches on watch html
+    showWatchProducts(products) {
         let output = '';
-        ceasuri.forEach(ceas => {
+        products.forEach(product => {
+            if(product.category == "ceasuri"){
             output +=`
                         <div class="col-sm-6 col-md-4 col-lg-2  product-grid">
                             <div class="image">
                                 <a href="#">
-                                    <img src="${ceas.image}" id="image" class="w-100" />
+                                    <img src="${product.image}" id="image" class="w-100" />
                                 </a>
                             </div>
-                            <h5 class="text-center">${ceas.title}</h5>
-                            <h5 class="text-center">Pret: ${ceas.price} Ron</h5>
+                            <h5 class="text-center">${product.title}</h5>
+                            <h5 class="text-center">Price: ${product.price} Ron</h5>
                             <a href="#" class="btn buy">Buy</a>
-                            <a href="#" class="btn buy">Add to Cart</a>
+                            <a href="details.html?id=${product.id}" class="btn buy id="${product.id}">Details</a>
                         </div>
                     `;
             this.watchDiv.innerHTML = output;
+            }
         });
     }
 
+    //show iphone for iphone html
 
+    showIphonesProductsOnly(products) {
+        let output = '';
+        products.forEach(product => {
+            if(product.category == "iPhone"){
+            output +=`
+                        <div class="col-sm-6 col-md-4 col-lg-2  product-grid">
+                            <div class="image">
+                                <a href="#">
+                                    <img src="${product.image}" id="image" class="w-100" />
+                                </a>
+                            </div>
+                            <h5 class="text-center">${product.title}</h5>
+                            <h5 class="text-center">Price: ${product.price} Ron</h5>
+                            <a href="#" class="btn buy">Buy</a>
+                            <a href="details.html?id=${product.id}" class="btn buy id="${product.id}">Details</a>
+                        </div>
+                    `;
+            this.iphoneDiv.innerHTML = output;
+            }
+        });
+    }
 
-    //show details for iphones
+    //show details for all products
 
     showDetails(products){
         let output ='';
         output = `
-        <div class="col-sm-6 col-md-4 col-lg-2  product-grid">
-            <div class="image">
-                <a href="#">
-                    <img src="${products.image}" id="image" class="w-100" />
-                </a>
-            </div>
-            <h5 class="text-center">${products.title}</h5>
-            <h5 class="text-center">Pret: ${products.price} Ron</h5>
-            <a href="#" class="btn buy">Buy</a>
-            <a href="#" class="btn buy">Add to Cart</a>
-        </div>
+                    <div class="card-wrapper">
+                            <div class="product-imgs">
+                                <div class="img-display">
+                                    <div class="img-showcase">
+                                        <img src="${products.image}" />
+                                    </div>
+                                </div>
+                            </div>
+                                <div class="product-content">
+                                    <h2 class="product-title">${products.title}</h2>
+                                    <div class="product-price">
+                                        <p class="blue-price">Price: <span>${products.price} Ron</span></p>
+                                    </div>
+                                    <div class="product-detail">
+                                        <h2>about this item:</h2>
+                                        <p>${products.description}</p>
+                                        <ul>
+                                            <li>Available: <span>in stock</span></li>
+                                            <li>Category: <span>${products.category}</span></li>
+                                            <li>Shipping Area: <span>All over the world</span></li>
+                                            <li>Shipping Fee: <span>Free</span></li>
+                                        </ul>
+                                    </div>
+                                    <div class="purchase-info">
+                                        <input type="number" min="0" max="5" value="1" />
+                                        <button type="button" class="btn">Add to Cart <i class="fas fa-shopping-cart"></i></button>
+                                    </div>
+                                </div>
+                    </div>
         `;
         this.detailsDiv.innerHTML = output;
     }
 
-
-
-    // show details for macs
-
-    showDetailsMacs(macs){
-        let output ='';
-        output = `
-        <div class="col-sm-6 col-md-4 col-lg-2  product-grid">
-            <div class="image">
-                <a href="#">
-                    <img src="${macs.image}" id="image" class="w-100" />
-                </a>
-            </div>
-            <h5 class="text-center">${macs.title}</h5>
-            <h5 class="text-center">Pret: ${macs.price} Ron</h5>
-            <a href="#" class="btn buy">Buy</a>
-            <a href="#" class="btn buy">Add to Cart</a>
-        </div>
-        `;
-        this.detailsDiv.innerHTML = output;
-    }
-
-
-    // //show details for ipads
-
-    // showDetailsIpads(ipads){
-    //     let output ='';
-    //     output = `
-    //     <div class="col-sm-6 col-md-4 col-lg-2  product-grid">
-    //         <div class="image">
-    //             <a href="#">
-    //                 <img src="${ipads.image}" id="image" class="w-100" />
-    //             </a>
-    //         </div>
-    //         <h5 class="text-center">${ipads.title}</h5>
-    //         <h5 class="text-center">Pret: ${ipads.price} Ron</h5>
-    //         <a href="#" class="btn buy">Buy</a>
-    //         <a href="#" class="btn buy">Add to Cart</a>
-    //     </div>
-    //     `;
-    //     this.detailsDiv.innerHTML = output;
-    // }
 }
 
 export const ui = new UI();

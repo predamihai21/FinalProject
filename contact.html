@@ -34,10 +34,11 @@
           <nav class="navbar navbar-dark bg-dark">
             <a class="navbar-brand" href="index.html" title="mstore"> m s t <span><i class="fab fa-apple animate__animated animate__flash"></i></span> r e</a>
             <ul class="center-nav">
-              <li><a href="index.html">iPhone</a></li>
+              <li><a href="index.html">Store</a></li>
               <li><a href="ipad.html">iPad</a></li>
               <li><a href="mac.html">Mac</a></li>
               <li><a href="watch.html">Watch</a></li>
+              <li><a href="store.html">iPhone</a></li>
             </ul>
             <ul class="main-nav">
               <li>
@@ -51,32 +52,32 @@
         </header>
 
 
-
+        
         <div class="container-contact">
+          <h8 class="banner-none" id="succes"></h8> 
             <div class="wrap-contact">
-                <form class="contact">
-                    <h4>Contact Us</h4>
+                <form class="contact" id="form1">
+                  
+                     <h4>Contact Us</h4>
     
                     <div class="wrap-input">
                         <span class="label-input">Your Name</span>
-                        <input class="input" type="text" name="name" placeholder="Enter your name">
-                        <span class="focus-input"></span>
+                        <input class="input" type="text" name="name" placeholder="Enter your name" id="name">
                     </div>
     
                     <div class="wrap-input">
                         <span class="label-input">Email</span>
-                        <input class="input" type="text" name="email" placeholder="Enter your email addess">
-                        <span class="focus-input"></span>
+                        <input class="input" type="text" name="email" placeholder="Enter your email addess" id="email">
                     </div>
 
                     <div class="wrap-input">
                         <span class="label">Message</span>
-                        <textarea class="input" name="message" placeholder="Your message here..."></textarea>
-                        <span class="focus-input"></span>
+                        <textarea class="input" name="message" placeholder="Your message here..." id="message"></textarea>
+                        <span class="focus-input" id="messageError"></span>
                     </div>
     
                     <div class="container-contact-form-btn">
-                        <button class="contact-form-btn">Submit</button>
+                        <button class="contact-form-btn" id="submitBTt">Submit</button>
                     </div>
                 </form>
             </div>
@@ -88,7 +89,7 @@
 
 
     
-
+        <script src="src/contact.js"></script>
 
         <script
           src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"

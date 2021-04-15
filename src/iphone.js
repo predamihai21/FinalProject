@@ -1,8 +1,9 @@
 import { http } from './http.js';
 import {ui} from './ui.js';
 
-document.addEventListener('DOMContentLoaded', showAllProducts);
+document.addEventListener('DOMContentLoaded', showIphone);
 
-function showAllProducts(){
-    http.get('http://localhost:3000/products').then((data) => ui.showAllProducts(data));
+function showIphone() {
+    http.get('http://localhost:3000/products').then((data) => ui.showIphonesProductsOnly(data));
 }
+

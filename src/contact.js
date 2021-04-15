@@ -13,9 +13,7 @@ function submit(e){
     var banner = "Thank you for contacting us, " + nameInput + " ";
     var bannerElement= document.getElementById("succes");
     bannerElement.value = banner;
-    
-    error_message.style.padding = "10px";
-    
+
     var text;
     if(nameInput.length < 5){
       text = "Please Enter valid Name";
@@ -40,3 +38,4 @@ function submit(e){
     e.preventDefault();
     return true;
 }
+

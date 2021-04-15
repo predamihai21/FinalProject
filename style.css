@@ -8,83 +8,57 @@
 
 /* navbar styling */
 
-header{
-    background-color: #000000e0;
-}
-.page-header #nav-items a{
-    color: white;
-}
-.navbar {
+.text-end ul{
+    list-style: none;
     display: flex;
-    justify-content: space-between;
-    height: 60px;
+}
+.text-end ul a{
+    margin-right: 20px;
+}
+.text-end ul li a{
+    text-decoration: none;
+    color: white;
 }
 .navbar-brand {
-    display: flex;
-    font-family: 'Rubik', sans-serif;
-    color: white;
-    width: 189px;
-    height: 64px;
-    font-size: 22px;
-    font-weight: 600;
-    margin-left: 100px;
-    margin-top: -10px;
+    margin-left: 10%;
+    color: white !important;
+    text-decoration: none !important;
 }
-li {
-    padding: 20px;
+.col-lg-auto{
+    margin-left: 23%;
+    font-size: 14px;
+}
+
+.nav li{
+    margin-right: 3rem;
 }
 .main-nav{
-    display: flex;
-    list-style: none;
-    margin-right: 100px;
-
-    margin-top: -10px;
+    margin-top: 10px;
 }
-.fab{
-    margin-left: 5px;
-    margin-right: 5px;
-    color: white;
-    font-size: 20px;
-}
-.navbar a{
-    color: white;
-    text-decoration: none;
-}
-.navbar .main-nav li a:hover{
+header .main-nav li a:hover{
     color: #dc143c;
 
 }
-.navbar .animate__animated{
+.navbar-brand .animate__animated{
     animation: flash;
     animation-duration: 2.4s;
     animation-iteration-count: 25;
 }
+.fab:hover, .fab:active { 
+    -webkit-transform: scale(1.7);
+    -moz-transform: scale(1.7);
+    -ms-transform: scale(1.7);
+    -o-transform: scale(1.7);
+    transform: scale(1.7); 
+}
 
-/* center nav */
-
-.center-nav{
-    display: flex;
-    margin-left: -80px;
-}
-.center-nav li{
-    list-style: none;
-    margin-top: -10px;
-}
-/* center nav hover */
-.center-nav li a:hover{
-    color: white;
-}
-.center-nav li:hover {
-    background-color: #353535;
-    color: white;
-}
-.center-nav li {
-    font-size: 13px;
+/* header and footer li styling*/
+.list-unstyled li {
     padding: 20px;
 }
-
-
-
+.product-desc li {
+    padding: 20px;
+}
 
 /* section-content */
 
@@ -128,8 +102,8 @@ li {
     position: absolute;
     width: 150px;
     height: 50px;
-    margin-top: -150px;
-    margin-left: 380px;
+    margin-top: -12%;
+    margin-left: 30%;
     text-transform: capitalize;
     font-weight: 600;
     font-size: 20px;
@@ -138,7 +112,7 @@ li {
 .fa{
     color: black;
 }
-/* h3 title text */
+/* h3 title text product section */
 
 .titleText{
     text-align: center;
@@ -154,8 +128,6 @@ li {
     padding-top: 20px;
 }
 .product-grid:hover{
-    /* box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
-    /* border: 1px solid#4e33e4; */
     /* cssmatic.com/box-shadow */
     -webkit-box-shadow: 0px 0px 8px 0.19px rgba(78,51,228,0.9);
     -moz-box-shadow: 0px 0px 8px 0.19px rgba(78,51,228,0.9);
@@ -174,37 +146,10 @@ li {
     margin-left: 80px;
 }
 
-
 .text-center{
     margin-top: 30px;
 }
 
-
-/* .overlay{
-    position: absolute;
-    border-radius: 10%;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 106%;
-    width: 100%;
-    opacity: 0;
-    transition: .5s ease;
-    background-color: rgba(67, 68, 68, 0.7);
-} */
-/* .image:hover .overlay{
-    opacity: 1;
-} */
-/* .detail{
-    color: #fff;
-    font-size: 12px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%);
-} */
 .buy{
     background-color: transparent;
     color: #434444;
@@ -260,11 +205,6 @@ li {
     background-color: #fff;
 }
 
-/* .cantitate{
-    width: 60px;
-} */
-
-
 
 
 /* admin form styling */
@@ -284,7 +224,10 @@ li {
 }
 
 /* admin table and text styling */
-
+#adminTitle {
+    text-align: center;
+    padding-top: 40px;
+}
 .table td {
     text-align: left;
     max-width: 50px;
@@ -294,10 +237,12 @@ li {
 }
 #textQuant{
     width: 16.6%;
+    padding-left: 70px;
 }
 #textPrice{
     width: 16.6%;
-    text-align: left;
+    text-align: center;
+    padding-right: 25px;
 }
 #textOption{
     width: 16.6%;
@@ -309,8 +254,15 @@ li {
 #tableList{
     margin-bottom: -20px;
 }
-
-
+#add-product{
+    height: 50px;
+}
+#productQuantity{
+    text-align: center;
+}
+#productPrice{
+    text-align: center;
+}
 /* mac html page styling */
 .text-centered {
     text-align: center;
@@ -386,15 +338,6 @@ footer a:link {
 }
 .footer-copyright{
     margin-top: 0px;
-}
-
-
-.fab:hover, .fab:active { 
-    -webkit-transform: scale(1.7);
-    -moz-transform: scale(1.7);
-    -ms-transform: scale(1.7);
-    -o-transform: scale(1.7);
-    transform: scale(1.7); 
 }
 
 
@@ -512,7 +455,7 @@ button:hover {
 
 /* product details styling */
 #detailsPage{
-    padding-top: 30px;
+    padding-top: 10px;
 }
 .card-wrapper{
     display: flex;
@@ -537,7 +480,8 @@ img{
     margin-bottom: auto;
 }
 .product-content{
-    padding: 2rem 1rem;
+    padding-top: 50px;
+    padding-left: 20px;
 }
 .product-title{
     font-size: 35px;
@@ -545,7 +489,7 @@ img{
     font-weight: 700;
     position: relative;
     color: #12263a;
-    margin: 1rem 0;
+    margin-bottom: 20px;
 }
 .product-price{
     font-size: 22px;
@@ -559,16 +503,15 @@ img{
 }
 .product-detail h2{
     text-transform: capitalize;
-    color: #12263a;
 }
 .product-detail p{
     font-size: 18px;
-    padding: 0.3rem;
+    margin-top: 5px;
     opacity: 0.8;
 }
 .product-detail ul{
     font-size: 14px;
-    padding-left: 0 !important;
+    padding-left: 0;
 }
 .product-detail ul li{
     margin: 0;
@@ -586,14 +529,13 @@ img{
 }
 
 .purchase-info .btn{
-    border: 1.5px solid #ddd;
     border-radius: 25px;
     text-align: center;
     outline: 0;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
 }
 .purchase-info input{
-    border: 1.5px solid #f64749;
+    border: 1.5px solid #3243d6;
     border-radius: 25px;
     text-align: center;
     padding: 5px 10px;
@@ -611,11 +553,72 @@ img{
     margin-top: 13px;
 }
 .purchase-info .btn{
-    background: #f64749;
+    background: #3243d6;
 }
 .purchase-info .btn:hover{
     opacity: 0.9;
+    color: #1dce1d;
+}
+
+/* details add to cart success message */
+.alert-dark a{
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Rubik', sans-serif;
 }
 
 
+/* cart styling */
+#shopping{
+    font-size: 25px;
+    text-align: center;
+    padding-top: 40px;
+}
 
+.table .delete{
+    width: 60px;
+}
+.table a{
+    text-decoration: none;
+}
+.table .form-control{
+    max-width: 15%;
+    text-align: center;
+    margin-left: 10px;
+}
+.table .total{
+    color: black;
+}
+#totalCart{
+    text-align: center;
+    width: 30%;
+}
+.tva {
+    margin-top: 10px;
+    font-size: 12px;
+}
+.subTotal{
+    font-size: 14px;
+}
+.total{
+    font-size: 22px;
+    color: blue;
+}
+.btn-success{
+    width: 40%;
+    margin-bottom: 20px;
+}
+
+/* shopping cart btn succes */
+.alert-success{
+    text-align: center;
+
+}
+.alert-danger{
+    text-align: center;
+    font-size: 18px;
+}
+.fa-shopping-cart{
+    color: #198754;
+    font-family: 'Rubik', sans-serif;
+}

@@ -151,7 +151,7 @@ class UI {
         });
     }
 
-    //show iphone for iphone html
+    //show iphone on iphone html
 
     showIphonesProductsOnly(products) {
         let output = '';
@@ -183,7 +183,7 @@ class UI {
                             <div class="product-imgs">
                                 <div class="img-display">
                                     <div class="img-showcase">
-                                        <img src="${products.image}" />
+                                    <img src="${products.image}" id="image" class="w-100" />
                                     </div>
                                 </div>
                             </div>
@@ -227,7 +227,7 @@ class UI {
                                 <td><img src="${product.image}" class="img-thumbnail"/></td>
                                 <td><a href="details.html?id=${product.id}">${product.title}</a></td>
                                 <td>${product.category}</td>
-                                <td class ="price">${product.price}</td>
+                                <td class ="price">${product.price} Ron</td>
                                 <td>
                                     <select class="form-control" id="exampleFormControlSelect1">
                                         <option>1</option>
@@ -241,7 +241,7 @@ class UI {
                 `;
                 this.tableCart.innerHTML = output;
             }
-        });			 
+        });
     }
 }
 
